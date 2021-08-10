@@ -27,7 +27,7 @@
           <a class="nav-link" href="/"> Accueil <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/events/new">Créer un évènement</a>
+          <a class="nav-link" href="events/new">Créer un évènement</a>
         </li>
         <%# !!!!! Si déjà connecté :  %>
       <% if user_signed_in? %>
@@ -38,12 +38,13 @@
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <a class="dropdown-item" href="/users/show">Mon profil</a>
-            <a class="dropdown-item" href="/users/sign_out">Se déconnecter</a>
+            <a class="dropdown-item" href="destroy_user_session_path">Se déconnecter</a>
           </div>
         </li>
         <%# ----------------- %>
       <% else %>
-        <%# Si pas encore connecté :  %>
+
+        <%# !!!!! Si pas encore connecté :  %>
                 <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             S'inscrire / Se connecter
